@@ -45,7 +45,9 @@ end
 ---@param opts boolean|Opts
 ---@param source 'native'|'coc'|nil If nil, defaults to 'native'.
 function M.show(namespace, bufnr, diagnostics, opts, source)
-  if not vim.api.nvim_buf_is_loaded(bufnr) then return end
+  if not vim.api.nvim_buf_is_loaded(bufnr) then
+    return
+  end
   vim.validate({
     namespace = { namespace, "n" },
     bufnr = { bufnr, "n" },
@@ -146,7 +148,7 @@ function M.show(namespace, bufnr, diagnostics, opts, source)
             overlap = false
           elseif type == BLANK then
             if multi == 0 then
-              table.insert(left, { "└", highlight_groups[data.severity] })
+              table.insert(left, { "╰", highlight_groups[data.severity] })
             else
               table.insert(left, { "┴", highlight_groups[data.severity] })
             end
@@ -164,7 +166,7 @@ function M.show(namespace, bufnr, diagnostics, opts, source)
         elseif multi > 0 then
           center_symbol = "┴"
         else
-          center_symbol = "└"
+          center_symbol = "╰"
         end
         -- local center_text =
         local center = {
