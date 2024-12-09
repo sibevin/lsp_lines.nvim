@@ -52,8 +52,8 @@ use({
 
 # Setup
 
-It's recommended to also remove the regular virtual text diagnostics to avoid
-pointless duplication:
+When using this plug-in, the regular virtual text diagnostics becomes
+redundant. It is recommended to disable it:
 
 ```lua
 -- Disable virtual_text since it's redundant due to lsp_lines.
