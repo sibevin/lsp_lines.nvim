@@ -29,6 +29,18 @@ diagnostic per line, but there's no way to view more than the first.
 
 # Installation
 
+Clone this repository into neovim's plug-in directory:
+
+    mkdir -p ~/.local/share/nvim/site/pack/plugins/start/
+    cd ~/.local/share/nvim/site/pack/plugins/start/
+    git clone git@git.sr.ht:~whynothugo/lsp_lines.nvim
+
+And then in `init.lua`:
+
+    require("lsp_lines").setup()
+
+You may also use a plug-in manager that does this for you.
+
 ## With packer.nvim
 
 Using packer.nvim (this should probably be registered _after_ `lspconfig`):
@@ -41,18 +53,6 @@ use({
   end,
 })
 ```
-
-## With git
-
-You can algo just clone the repo into neovim's plug-in directory:
-
-    mkdir -p $HOME/.local/share/nvim/site/pack/plugins/start/
-    cd $HOME/.local/share/nvim/site/pack/plugins/start/
-    git clone git@git.sr.ht:~whynothugo/lsp_lines.nvim
-
-And then in `init.lua`:
-
-    require("lsp_lines").setup()
 
 # Setup
 
