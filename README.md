@@ -35,10 +35,6 @@ Clone this repository into neovim's plug-in directory:
     cd ~/.local/share/nvim/site/pack/plugins/start/
     git clone git@git.sr.ht:~whynothugo/lsp_lines.nvim
 
-And then in `init.lua`:
-
-    require("lsp_lines").setup()
-
 You may also use a plug-in manager that does this for you.
 
 ## With packer.nvim
